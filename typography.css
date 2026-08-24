@@ -17,9 +17,9 @@ textarea {
 }
 
 /* Softer type color and weight keep the warm palette calm and less digital. */
-body { color: #403a33 !important; font-variation-settings: 'wght' 430; letter-spacing: -.006em; }
-p, li, input, select, textarea { font-variation-settings: 'wght' 420; }
-.manifesto h2, .feature h2, .visit h2, .hero-p h1, .sub h1, .history-main h1 { font-variation-settings: 'wght' 440; }
+body { color: #403a33 !important; font-weight: 400; letter-spacing: -.006em; }
+p, li, input, select, textarea { font-weight: 400; }
+.manifesto h2, .feature h2, .visit h2, .hero-p h1, .sub h1, .history-main h1 { font-weight: 500 !important; }
 .manifesto-bottom p, .feature-copy > p, .section-head > p:last-child, .body-copy p { color: #625a51 !important; }
 
 /* A small brand mark: playful enough for families, restrained enough for a studio. */
@@ -359,4 +359,13 @@ body:has(.history-main) .timeline span { color: #f2db72 !important; }
     text-shadow: none !important;
   }
   .header.header nav.open a:last-child { border-bottom: 0; }
+}
+
+/* Mobile Korean headings: compact, readable, and deliberately limited to two lines. */
+@media (max-width: 700px) {
+  .hero-p h1, .sub h1 { font-size: clamp(31px, 8.7vw, 36px) !important; line-height: 1.22 !important; letter-spacing: -.032em !important; }
+  .history-main h1 { font-size: clamp(34px, 9vw, 39px) !important; line-height: 1.18 !important; }
+  .manifesto h2, .feature h2, .section-head h2, .journal h2 { font-size: clamp(34px, 9vw, 39px) !important; line-height: 1.18 !important; letter-spacing: -.03em !important; }
+  .visit h2 { font-size: clamp(40px, 11vw, 48px) !important; }
+  .sub-intro { font-size: 16px !important; line-height: 1.7 !important; }
 }
