@@ -12,7 +12,7 @@ button,
 input,
 select,
 textarea {
-  font-family: 'Icare Suit', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif !important;
+  font-family: Pretendard, 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif !important;
   font-synthesis: none;
 }
 
@@ -26,7 +26,7 @@ textarea {
 .feature h2,
 .visit h2,
 .cta h2,
-.profile-copy h2 { font-family: 'Icare Suit', 'Apple SD Gothic Neo', sans-serif !important; font-style: normal; }
+.profile-copy h2 { font-family: Pretendard, 'Apple SD Gothic Neo', sans-serif !important; font-style: normal; }
 
 .sub-intro,
 .manifesto-bottom p,
@@ -37,7 +37,7 @@ textarea {
 .inquiry-form input,
 .inquiry-form select,
 .inquiry-form textarea {
-  font-family: 'Icare Suit', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif !important;
+  font-family: Pretendard, 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif !important;
   letter-spacing: -0.012em;
 }
 
@@ -189,11 +189,11 @@ body:has(.history-main) .timeline div { border-bottom-color: rgb(255 255 255 / .
 
 /* Main-page editorial pass: quieter color, shorter hierarchy, and fewer UI boxes. */
 :root { --lime: #dce47a; }
-.manifesto { padding: 138px 10vw 124px !important; }
-.manifesto .manifesto-label { margin-bottom: 22px; font-family: 'Icare Suit', sans-serif; font-size: 13px; font-weight: 600; letter-spacing: -.01em; }
-.manifesto h2 { max-width: 900px; font-weight: 500 !important; letter-spacing: -.052em !important; }
-.manifesto-bottom { width: min(100%, 470px) !important; margin: 38px 0 0 !important; }
-.manifesto-bottom p { margin: 0 0 22px !important; color: #4d5852; }
+.manifesto { padding: 104px 10vw 96px !important; display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(270px, .65fr); column-gap: 7vw; align-items: end; }
+.manifesto .manifesto-label { grid-column: 1; margin-bottom: 20px; font-family: Pretendard, sans-serif; font-size: 13px; font-weight: 600; letter-spacing: -.01em; }
+.manifesto h2 { grid-column: 1; max-width: 760px; font-weight: 500 !important; letter-spacing: -.052em !important; }
+.manifesto-bottom { grid-column: 2; grid-row: 1 / span 2; width: auto !important; margin: 0 0 4px !important; }
+.manifesto-bottom p { margin: 0 0 22px !important; color: #4d5852; font-size: 16px !important; line-height: 1.78 !important; }
 
 .programs { background: #d9d5cd !important; }
 .section-head > p:last-child { color: #4d5852; }
@@ -216,7 +216,7 @@ body:has(.history-main) .timeline div { border-bottom-color: rgb(255 255 255 / .
 }
 
 @media (max-width: 700px) {
-  .manifesto { padding: 56px 24px !important; }
+  .manifesto { padding: 56px 24px !important; display: block; }
   .manifesto .manifesto-label { margin-bottom: 16px; font-size: 12px; }
   .manifesto-bottom { margin-top: 26px !important; }
   .feature { background: #405047 !important; }
