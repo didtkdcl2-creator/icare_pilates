@@ -1,3 +1,21 @@
+/* A self-hosted Korean variable font avoids width shifts while external fonts load. */
+@font-face {
+  font-family: 'Icare Suit';
+  src: url('/assets/fonts/SUIT-Variable.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+  font-family: 'Icare Suit', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif !important;
+  font-synthesis: none;
+}
+
 /* Korean display type guardrail: apply only where the visible title is Korean.
    English display headings retain the editorial serif face on the main page. */
 .hero-p h1,
@@ -7,7 +25,21 @@
 .manifesto h2,
 .feature h2,
 .visit h2,
-.cta h2 { font-family: Pretendard, Arial, sans-serif; font-style: normal; }
+.cta h2,
+.profile-copy h2 { font-family: 'Icare Suit', 'Apple SD Gothic Neo', sans-serif !important; font-style: normal; }
+
+.sub-intro,
+.manifesto-bottom p,
+.feature-copy > p,
+.content p,
+.body-copy p,
+.profile-copy > p,
+.inquiry-form input,
+.inquiry-form select,
+.inquiry-form textarea {
+  font-family: 'Icare Suit', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif !important;
+  letter-spacing: -0.012em;
+}
 
 .hero-p h1 { font-size: clamp(48px, 5vw, 78px) !important; line-height: 1.08 !important; letter-spacing: -.045em !important; }
 .hero-p .eyebrow { margin-bottom: 18px; }
