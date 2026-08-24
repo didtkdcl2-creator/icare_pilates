@@ -1,1 +1,263 @@
-<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>예약 · 문의 | ICARE Pilates</title><link rel="stylesheet" href="/style.css"><style>.sub{background:#f3f0eb;min-height:100vh;color:#19231f}.sub-head{padding:28px 5vw;display:flex;justify-content:space-between;align-items:center}.sub-head a{color:inherit;text-decoration:none;font:12px 'DM Mono'}.sub-main{max-width:1220px;margin:auto;padding:85px 5vw 120px;display:grid;grid-template-columns:1fr 1fr;gap:10vw}.sub h1{font:400 clamp(58px,7vw,108px)/.92 Pretendard;letter-spacing:-.06em;margin:0 0 30px}.sub-intro{font-size:17px;line-height:1.8}.contact-buttons{display:flex;gap:10px;margin-top:45px}.contact-buttons a{padding:15px 18px;background:#19231f;color:#fff;text-decoration:none;font-size:13px}.contact-buttons a:last-child{background:#f5dd57;color:#19231f}.inquiry-form{padding-top:15px}.inquiry-form label{display:grid;gap:9px;font-size:13px;font-weight:600;margin:0 0 23px}.inquiry-form input,.inquiry-form select,.inquiry-form textarea{border:0;border-bottom:1px solid #19231f66;background:transparent;padding:12px 0;font:16px Pretendard;outline:0}.inquiry-form textarea{height:105px;resize:vertical}.inquiry-form button{background:#19231f;color:white;border:0;padding:16px 22px;font:12px 'DM Mono';cursor:pointer}.board{max-width:1220px;margin:auto;padding:0 5vw 100px}.board-head{display:flex;justify-content:space-between;align-items:end;border-bottom:1px solid #19231f}.board h2{font-size:32px;letter-spacing:-.04em}.board p{font-size:13px}.post{display:grid;grid-template-columns:70px 1fr 110px;gap:20px;padding:22px 0;border-bottom:1px solid #19231f2e;font-size:15px}.post small{font:11px 'DM Mono';color:#68756e}@media(max-width:700px){.sub-main{display:block;padding-top:50px}.inquiry-form{margin-top:60px}.post{grid-template-columns:38px 1fr}.post small{display:none}}</style></head><body class="sub"><header class="sub-head"><a class="logo" href="index.html">I<span>CARE</span><small>KIDS & FAMILY PILATES</small></a><a href="index.html">← HOME</a></header><main><section class="sub-main"><div><p class="eyebrow">RESERVATION & Q&A</p><h1>우리 아이에게<br>꼭 맞는 움직임을<br>찾아볼까요?</h1><p class="sub-intro">첫 상담에서 아이의 움직임과 생활 습관을 함께 살펴봅니다.<br>원하는 프로그램과 가능한 시간을 남겨주시면 확인 후 안내드립니다.</p><div class="contact-buttons"><a href="tel:0507-1379-2479">전화 문의</a><a href="#form">K 카카오톡 문의</a><a href="https://naver.me/GXFVllY5" target="_blank" rel="noreferrer">N 네이버 플레이스</a></div></div><form class="inquiry-form" id="form"><label>보호자 성함<input placeholder="성함을 입력해 주세요"></label><label>연락처<input type="tel" placeholder="010-0000-0000"></label><label>관심 프로그램<select><option>어린이 필라테스</option><option>골프 필라테스</option><option>산후 · 통증 케어</option><option>시니어 · 임산부 운동</option></select></label><label>문의 내용<textarea placeholder="아이의 연령, 운동 경험, 궁금한 점을 남겨주세요."></textarea></label><button type="button" onclick="this.textContent='문의가 접수되었습니다 ✓'">문의 남기기 →</button></form></section><section class="board"><div class="board-head"><h2>자주 묻는 질문</h2><p>수업 전 확인해 주세요.</p></div><article class="post"><small>01</small><b>어린이 필라테스는 몇 살부터 가능한가요?</b><small>답변 완료</small></article><article class="post"><small>02</small><b>체험 수업은 어떻게 예약하나요?</b><small>답변 완료</small></article><article class="post"><small>03</small><b>주차와 보호자 대기 공간이 있나요?</b><small>답변 완료</small></article></section></main></body></html>
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>예약 · 문의 | ICARE Pilates</title>
+    <link rel="stylesheet" href="/style.css" />
+    <style>
+      .sub {
+        background: #f3f0eb;
+        min-height: 100vh;
+        color: #19231f;
+      }
+      .sub-head {
+        padding: 28px 5vw;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .sub-head a {
+        color: inherit;
+        text-decoration: none;
+        font: 12px "DM Mono";
+      }
+      .sub-main {
+        max-width: 1220px;
+        margin: auto;
+        padding: 85px 5vw 120px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10vw;
+      }
+      .sub h1 {
+        font: 400 clamp(58px, 7vw, 108px)/0.92 Pretendard;
+        letter-spacing: -0.06em;
+        margin: 0 0 30px;
+      }
+      .sub-intro {
+        font-size: 17px;
+        line-height: 1.8;
+      }
+      .contact-buttons {
+        display: flex;
+        gap: 10px;
+        margin-top: 45px;
+      }
+      .contact-buttons a {
+        padding: 15px 18px;
+        background: #19231f;
+        color: #fff;
+        text-decoration: none;
+        font-size: 13px;
+      }
+      .contact-buttons a:last-child {
+        background: #f5dd57;
+        color: #19231f;
+      }
+      .inquiry-form {
+        padding-top: 15px;
+      }
+      .inquiry-form label {
+        display: grid;
+        gap: 9px;
+        font-size: 13px;
+        font-weight: 600;
+        margin: 0 0 23px;
+      }
+      .inquiry-form input,
+      .inquiry-form select,
+      .inquiry-form textarea {
+        border: 0;
+        border-bottom: 1px solid #19231f66;
+        background: transparent;
+        padding: 12px 0;
+        font: 16px Pretendard;
+        outline: 0;
+      }
+      .inquiry-form textarea {
+        height: 105px;
+        resize: vertical;
+      }
+      .inquiry-form button {
+        background: #19231f;
+        color: white;
+        border: 0;
+        padding: 16px 22px;
+        font: 12px "DM Mono";
+        cursor: pointer;
+      }
+      .inquiry-form button:disabled { opacity: .55; cursor: wait; }
+      .confirm-dialog { width: min(510px, calc(100vw - 36px)); padding: 0; border: 0; background: #f3f0eb; color: #19231f; box-shadow: 0 30px 80px #0005; }
+      .confirm-dialog::backdrop { background: rgb(25 35 31 / .62); }
+      .confirm-inner { padding: 48px; }
+      .confirm-inner h2 { margin: 12px 0 17px; font: 400 32px/1.15 Pretendard; letter-spacing: -.04em; }
+      .confirm-inner p { font-size: 15px; line-height: 1.75; color: #526058; }
+      .phone-card { display: flex; align-items: center; justify-content: space-between; margin: 28px 0; padding: 17px 0; border-top: 1px solid #19231f; border-bottom: 1px solid #19231f; }
+      .phone-card span { font-size: 12px; }.phone-card a { color: inherit; text-decoration: none; font: 18px 'DM Mono'; }
+      .dialog-actions { display: flex; gap: 9px; margin-top: 34px; }.dialog-actions button { border: 0; padding: 15px 18px; background: #19231f; color: white; font: 12px 'DM Mono'; cursor: pointer; }.dialog-actions .cancel { background: transparent; color: #19231f; border: 1px solid #19231f55; }
+      .board {
+        max-width: 1220px;
+        margin: auto;
+        padding: 0 5vw 100px;
+      }
+      .board-head {
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        border-bottom: 1px solid #19231f;
+      }
+      .board h2 {
+        font-size: 32px;
+        letter-spacing: -0.04em;
+      }
+      .board p {
+        font-size: 13px;
+      }
+      .faq {
+        border-bottom: 1px solid #19231f2e;
+      }
+      .faq summary {
+        display: grid;
+        grid-template-columns: 70px 1fr 22px;
+        gap: 20px;
+        align-items: center;
+        cursor: pointer;
+        list-style: none;
+        padding: 24px 0;
+        font-size: 16px;
+        font-weight: 600;
+      }
+      .faq summary::-webkit-details-marker {
+        display: none;
+      }
+      .faq summary:after {
+        content: "+";
+        font-size: 22px;
+        font-weight: 400;
+        text-align: right;
+      }
+      .faq[open] summary:after {
+        content: "−";
+      }
+      .faq small {
+        font: 11px "DM Mono";
+        color: #68756e;
+      }
+      .faq-answer {
+        margin: 0 0 25px 90px;
+        max-width: 650px;
+        font-size: 15px;
+        line-height: 1.85;
+        color: #4b554f;
+      }
+      @media (max-width: 700px) {
+        .sub-main {
+          display: block;
+          padding-top: 50px;
+        }
+        .inquiry-form {
+          margin-top: 60px;
+        }
+        .faq summary {
+          grid-template-columns: 35px 1fr 22px;
+          gap: 10px;
+          font-size: 15px;
+        }
+        .faq-answer {
+          margin-left: 45px;
+          font-size: 14px;
+        }
+      }
+    </style>
+  </head>
+  <body class="sub">
+    <header class="sub-head">
+      <a class="logo" href="index.html"
+        >I<span>CARE</span><small>KIDS & FAMILY PILATES</small></a
+      ><a href="index.html">← HOME</a>
+    </header>
+    <main>
+      <section class="sub-main">
+        <div>
+          <p class="eyebrow">RESERVATION & Q&A</p>
+          <h1>우리 아이에게<br />꼭 맞는 움직임을<br />찾아볼까요?</h1>
+          <p class="sub-intro">
+            첫 상담에서 아이의 움직임과 생활 습관을 함께 살펴봅니다.<br />원하는
+            프로그램과 가능한 시간을 남겨주시면 확인 후 안내드립니다.
+          </p>
+          <div class="contact-buttons">
+            <a href="tel:0507-1379-2479">전화 문의</a
+            ><a href="#form">K 카카오톡 문의</a
+            ><a
+              href="https://naver.me/GXFVllY5"
+              target="_blank"
+              rel="noreferrer"
+              >N 네이버 플레이스</a
+            >
+          </div>
+        </div>
+        <form class="inquiry-form" id="form">
+          <label>보호자 성함<input name="name" placeholder="성함을 입력해 주세요" required /></label
+          ><label>연락처<input name="phone" type="tel" placeholder="010-0000-0000" required /></label
+          ><label
+            >관심 프로그램<select name="program">
+              <option>어린이 필라테스</option>
+              <option>골프 필라테스</option>
+              <option>산후 · 통증 케어</option>
+              <option>시니어 · 임산부 운동</option>
+            </select></label
+          ><label
+            >문의 내용<textarea
+              name="message" placeholder="아이의 연령, 운동 경험, 궁금한 점을 남겨주세요." required
+            ></textarea></label
+          ><button type="submit">문의 남기기 →</button>
+        </form>
+      </section>
+      <section class="board">
+        <div class="board-head">
+          <h2>자주 묻는 질문</h2>
+          <p>질문을 누르면 답변을 볼 수 있어요.</p>
+        </div>
+        <details class="faq">
+          <summary>
+            <small>01</small
+            ><span>어린이 필라테스는 몇 살부터 가능한가요?</span>
+          </summary>
+          <p class="faq-answer">
+            보통 만 5세부터 시작할 수 있습니다. 다만 연령보다 아이의 움직임
+            발달과 수업 참여도를 먼저 살펴보고, 상담 후 가장 편안한 시작 시점을
+            안내합니다.
+          </p>
+        </details>
+        <details class="faq">
+          <summary>
+            <small>02</small><span>체험 수업은 어떻게 예약하나요?</span>
+          </summary>
+          <p class="faq-answer">
+            상단 예약 문의 양식 또는 전화로 희망 요일과 시간을 남겨 주세요. 원장
+            상담 후 아이에게 맞는 체험 수업 시간과 준비사항을 안내드립니다.
+          </p>
+        </details>
+        <details class="faq">
+          <summary>
+            <small>03</small><span>주차와 보호자 대기 공간이 있나요?</span>
+          </summary>
+          <p class="faq-answer">
+            벨포레스퀘어 지하 주차장을 이용하실 수 있고, 수업 중에는 보호자 대기
+            공간에서 편안히 기다리실 수 있습니다.
+          </p>
+        </details>
+      </section>
+    </main>
+    <dialog class="confirm-dialog" id="inquiry-confirm"><div class="confirm-inner"><p class="eyebrow">CONFIRM YOUR INQUIRY</p><h2>문의 내용을<br>등록하시겠습니까?</h2><p>등록해 주시면 확인 후 <b>1~2일 이내 전화로 안내</b>드립니다.</p><div class="phone-card"><span>빠른 응대가 필요하신가요?</span><a href="tel:0507-1379-2479">0507-1379-2479 ↗</a></div><div class="dialog-actions"><button class="cancel" type="button">다시 작성</button><button class="submit-confirm" type="button">등록하기 →</button></div></div></dialog>
+    <dialog class="confirm-dialog" id="inquiry-success"><div class="confirm-inner"><p class="eyebrow">INQUIRY RECEIVED</p><h2>문의가<br>접수되었습니다.</h2><p>담당자가 내용을 확인한 뒤 <b>1~2일 이내 등록하신 번호로 연락</b>드리겠습니다.</p><div class="phone-card"><span>빠른 상담을 원하시면</span><a href="tel:0507-1379-2479">0507-1379-2479 ↗</a></div><div class="dialog-actions"><button class="submit-confirm" type="button" data-close-success>확인했습니다</button></div></div></dialog>
+    <script>
+      const inquiryForm = document.querySelector('#form'); const confirmDialog = document.querySelector('#inquiry-confirm'); const successDialog = document.querySelector('#inquiry-success');
+      inquiryForm.addEventListener('submit', event => { event.preventDefault(); if (inquiryForm.reportValidity()) confirmDialog.showModal(); });
+      confirmDialog.querySelector('.cancel').addEventListener('click', () => confirmDialog.close());
+      confirmDialog.querySelector('.submit-confirm').addEventListener('click', () => { const data = Object.fromEntries(new FormData(inquiryForm)); const type = new URLSearchParams(location.search).get('type') === 'trial' ? 'trial' : 'reservation'; const saved = JSON.parse(localStorage.getItem('icare_submissions') || '[]'); saved.push({ ...data, type, createdAt: new Date().toISOString() }); localStorage.setItem('icare_submissions', JSON.stringify(saved)); confirmDialog.close(); successDialog.showModal(); inquiryForm.reset(); });
+      successDialog.querySelector('[data-close-success]').addEventListener('click', () => successDialog.close());
+    </script>
+  </body>
+</html>
