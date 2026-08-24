@@ -187,9 +187,45 @@ body:has(.history-main) .timeline b { color: #f6f2ea !important; }
 body:has(.history-main) .timeline { border-top-color: rgb(255 255 255 / .28) !important; }
 body:has(.history-main) .timeline div { border-bottom-color: rgb(255 255 255 / .16) !important; }
 
+/* Main-page editorial pass: quieter color, shorter hierarchy, and fewer UI boxes. */
+:root { --lime: #dce47a; }
+.manifesto { padding: 138px 10vw 124px !important; }
+.manifesto .manifesto-label { margin-bottom: 22px; font-family: 'Icare Suit', sans-serif; font-size: 13px; font-weight: 600; letter-spacing: -.01em; }
+.manifesto h2 { max-width: 900px; font-weight: 500 !important; letter-spacing: -.052em !important; }
+.manifesto-bottom { width: min(100%, 470px) !important; margin: 38px 0 0 !important; }
+.manifesto-bottom p { margin: 0 0 22px !important; color: #4d5852; }
+
+.programs { background: #d9d5cd !important; }
+.section-head > p:last-child { color: #4d5852; }
+.program-card:after { background: linear-gradient(0deg, rgb(10 18 14 / .78), rgb(10 18 14 / .05) 66%) !important; }
+.program-card h3 { letter-spacing: -.035em; }
+.program-card span { opacity: .92; }
+
+.feature { background: #405047 !important; }
+.feature-copy > p { color: rgb(255 255 255 / .82); }
+.feature .text-link { color: #fff; }
+.journal { padding-top: 132px !important; padding-bottom: 132px !important; }
+.journal-list a { transition: background .18s, padding .18s !important; }
+.journal-list a:hover { background: #ebe7df !important; }
+.visit { background: #dce47a !important; }
+
+@media (min-width: 701px) {
+  .header.header nav { padding: 0 !important; background: transparent !important; backdrop-filter: none !important; gap: clamp(18px, 2vw, 32px) !important; }
+  .header .admin-link { min-height: 0; padding: 0 0 0 18px !important; border-left: 1px solid rgb(255 255 255 / .46) !important; background: transparent !important; }
+  .header .trial-link { padding: 0 18px !important; background: transparent !important; border-left: 1px solid rgb(255 255 255 / .46) !important; }
+}
+
+@media (max-width: 700px) {
+  .manifesto { padding: 56px 24px !important; }
+  .manifesto .manifesto-label { margin-bottom: 16px; font-size: 12px; }
+  .manifesto-bottom { margin-top: 26px !important; }
+  .feature { background: #405047 !important; }
+  .journal { padding-top: 56px !important; padding-bottom: 60px !important; }
+}
+
 /* Desktop Korean display type: refined hierarchy without oversized glyphs. */
 @media (min-width: 1025px) {
-  .manifesto h2 { font-size: clamp(42px, 4vw, 66px) !important; line-height: 1.12 !important; }
+  .manifesto h2 { font-size: clamp(42px, 3.7vw, 62px) !important; line-height: 1.14 !important; }
   .feature h2 { font-size: clamp(46px, 4.6vw, 70px) !important; line-height: 1.08 !important; }
   .visit h2 { font-size: clamp(54px, 5.2vw, 78px) !important; line-height: 1.02 !important; }
   .hero-p h1, .sub h1 { font-size: clamp(48px, 4.6vw, 70px) !important; }
