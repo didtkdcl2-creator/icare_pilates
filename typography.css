@@ -69,6 +69,32 @@ html:lang(ko) h2 { font-family: Pretendard, Arial, sans-serif; font-style: norma
 
   .inquiry-form input, .inquiry-form select, .inquiry-form textarea { width: 100%; font-size: 16px !important; }
   .inquiry-form button { width: 100%; min-height: 52px; font-size: 12px !important; }
+
+  /* The original desktop rules follow an early mobile block in style.css.
+     Keep all mobile section layouts explicit here, after those desktop rules. */
+  .manifesto { padding: 76px 24px !important; }
+  .programs { padding: 72px 22px 82px !important; }
+  .section-head { display: block !important; margin: 0 0 36px !important; }
+  .section-head h2 { margin: 14px 0 18px !important; }
+  .program-grid { grid-template-columns: 1fr !important; gap: 10px !important; }
+  .program-card, .program-card.large { height: 380px !important; }
+
+  .feature { grid-template-columns: 1fr !important; min-height: 0 !important; }
+  .feature-image { height: 330px !important; }
+  .feature-copy { height: auto !important; min-height: 410px; padding: 64px 24px !important; }
+
+  .journal { padding: 68px 24px 72px !important; }
+  .journal-heading { display: block !important; margin-bottom: 32px !important; }
+  .journal-heading h2 { font-size: clamp(36px, 10vw, 42px) !important; margin: 12px 0 20px !important; }
+  .journal-heading .text-link { margin: 0 !important; }
+  .journal-list a { grid-template-columns: 28px minmax(0, 1fr) 18px !important; gap: 12px !important; padding: 21px 0 !important; }
+  .journal-list em { display: none !important; }
+  .journal-list b { font-size: clamp(17px, 4.8vw, 20px) !important; line-height: 1.42 !important; }
+
+  .visit { min-height: 0 !important; padding: 72px 24px 38px !important; }
+  .visit-info { display: block !important; margin-top: 48px !important; }
+  .visit-info .round-link { margin-top: 28px; }
+  footer { display: block !important; padding: 34px 22px !important; }
 }
 
 @media (max-width: 380px) {
