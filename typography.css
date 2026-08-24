@@ -142,3 +142,39 @@ textarea {
   .contact-buttons { grid-template-columns: 1fr !important; }
   .contact-buttons a:last-child { grid-column: auto; }
 }
+
+/* Tablet is neither desktop nor phone: collapse the dense hero before it runs out of room. */
+@media (min-width: 701px) and (max-width: 1024px) {
+  body .header { height: 80px; padding: 0 5vw; }
+  body .header.header nav { display: none !important; }
+  body .menu-button { display: block !important; margin-left: auto; margin-right: 16px; }
+  body .header.header nav.open {
+    display: flex !important;
+    position: absolute;
+    inset: 80px 0 auto;
+    padding: 24px 5vw !important;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px !important;
+    background: var(--ink) !important;
+  }
+  body .trial-link { display: none; }
+  body .hero { grid-template-columns: 1fr !important; height: 720px !important; min-height: 0 !important; }
+  body .hero-image { position: absolute; inset: 0; opacity: .5; }
+  body .hero-copy { padding: 156px 0 0 10vw !important; }
+  body .hero h1 { font-size: clamp(62px, 10vw, 88px) !important; line-height: .9 !important; }
+  body .hero-index { left: 10vw; bottom: 32px !important; }
+  body .vertical { right: 5vw; bottom: 32px; }
+  body .round-link { width: 96px; height: 96px; }
+}
+
+/* The compiled base stylesheet loads after each page's inline theme styles. */
+body:has(.history-main) { background: #19231f !important; color: #f6f2ea !important; }
+body:has(.history-main) .history-head,
+body:has(.history-main) .history-main { color: #f6f2ea !important; }
+body:has(.history-main) .history-main h1,
+body:has(.history-main) .profile-copy h2,
+body:has(.history-main) .profile-copy > p,
+body:has(.history-main) .timeline b { color: #f6f2ea !important; }
+body:has(.history-main) .timeline { border-top-color: rgb(255 255 255 / .28) !important; }
+body:has(.history-main) .timeline div { border-bottom-color: rgb(255 255 255 / .16) !important; }
