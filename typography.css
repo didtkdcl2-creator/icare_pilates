@@ -230,3 +230,65 @@ body:has(.history-main) .timeline div { border-bottom-color: rgb(255 255 255 / .
   .visit h2 { font-size: clamp(54px, 5.2vw, 78px) !important; line-height: 1.02 !important; }
   .hero-p h1, .sub h1 { font-size: clamp(48px, 4.6vw, 70px) !important; }
 }
+
+/* Compact rhythm: retain breathing room while showing roughly a quarter more content. */
+@media (min-width: 701px) {
+  .hero { height: min(700px, 88vh) !important; min-height: 590px !important; }
+  .hero-copy { padding-top: 148px !important; }
+  .round-link { width: 88px; height: 88px; }
+  .manifesto { padding: 82px 10vw 76px !important; }
+  .programs { padding: 88px 4.2vw 96px !important; }
+  .section-head { margin-bottom: 52px !important; }
+  .program-card, .program-card.large { height: 440px !important; }
+  .feature { min-height: 620px !important; }
+  .feature-copy { padding: 82px 7vw !important; }
+  .journal { padding: 88px 10vw !important; }
+  .journal-heading { margin-bottom: 52px !important; }
+  .journal-list a { padding: 22px 0 !important; }
+  .visit { min-height: 470px !important; padding: 76px 10vw 42px !important; }
+  .map-poster { height: 260px !important; }
+  .history-main { padding: 58px 5vw 82px !important; }
+  .profile img { height: 540px !important; }
+  .gallery { margin-top: 72px !important; }
+  .gallery img { height: 350px !important; }
+  .gallery img:last-child { height: 240px !important; }
+  .journal-article { padding: 62px 5vw 84px !important; }
+  .journal-article > img { height: 410px !important; margin: 36px 0 42px !important; }
+  .hero-p { padding-top: 48px !important; padding-bottom: 64px !important; }
+  .program-image { height: min(430px, 46vw) !important; margin-top: 38px !important; }
+  .content { padding: 76px 5vw !important; }
+  .program-gallery { padding: 72px 5vw 78px !important; }
+  .gallery-photo { min-height: 390px !important; }
+  .cta { padding: 56px 5vw !important; }
+}
+
+@media (max-width: 700px) {
+  .hero { height: 610px !important; }
+  .hero-copy { padding-top: 116px !important; }
+  .hero .intro { margin: 25px 0 !important; }
+  .round-link { width: 82px; height: 82px; }
+  .manifesto { padding: 46px 24px !important; }
+  .programs { padding: 46px 22px 52px !important; }
+  .section-head { margin-bottom: 28px !important; }
+  .program-card, .program-card.large { height: 330px !important; }
+  .feature-image { height: 270px !important; }
+  .feature-copy { min-height: 300px !important; padding: 42px 24px !important; }
+  .journal { padding: 46px 24px 50px !important; }
+  .journal-heading { margin-bottom: 18px !important; }
+  .journal-list a { padding: 14px 0 !important; }
+  .visit { padding: 36px 24px 22px !important; gap: 18px !important; }
+  .map-poster { height: 160px !important; }
+  .visit-info { margin-top: 16px !important; }
+  .history-main { padding: 38px 6vw 56px !important; }
+  .profile img { height: 360px !important; }
+  .gallery { margin-top: 48px !important; }
+  .gallery img, .gallery img:last-child { height: 220px !important; }
+  .journal-article { padding: 42px 6vw 58px !important; }
+  .journal-article > img { height: 270px !important; margin: 28px 0 32px !important; }
+  .hero-p { padding: 32px 24px 48px !important; }
+  .program-image { height: 260px !important; margin-top: 26px !important; }
+  .content { padding: 48px 24px !important; }
+  .program-gallery { padding: 48px 24px !important; }
+  .gallery-photo { min-height: 250px !important; }
+  .cta { padding: 46px 24px !important; }
+}
