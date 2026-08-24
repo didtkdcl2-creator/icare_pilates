@@ -304,6 +304,8 @@ body:has(.history-main) .timeline div { border-bottom-color: rgb(255 255 255 / .
 body, .sub, .p-head, .j-head { background-color: #fffaf0; color: #2c2923; }
 .hero, .cta, #admin-dialog .admin-shell aside { background-color: #2c2923 !important; }
 .hero-image:after, .program-card:after { background: linear-gradient(0deg, rgb(44 41 35 / .76), rgb(44 41 35 / .04) 66%) !important; }
+.hero-image img, .feature-image img { filter: brightness(1.08) saturate(.9); }
+.program-card img { filter: brightness(1.06) saturate(.84); }
 .programs { background: #f0e3b5 !important; }
 .feature { background: #e6ca78 !important; color: #2c2923 !important; }
 .feature-copy > p, .feature .text-link { color: #2c2923 !important; }
