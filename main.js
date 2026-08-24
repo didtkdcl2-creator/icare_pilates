@@ -30,7 +30,18 @@ document.querySelectorAll('[data-role]').forEach(button => button.addEventListen
   const notes = { OWNER:'회원·예약·콘텐츠·Q&A 및 권한 관리를 모두 수행할 수 있습니다.', MANAGER:'예약·회원·Q&A를 관리하고 운영 콘텐츠를 검토할 수 있습니다.', EDITOR:'포트폴리오·저널·교육 콘텐츠와 Q&A 답변 초안을 관리할 수 있습니다.' };
   const permission = document.querySelector('.permission'); if (permission) permission.innerHTML = `권한 안내: <b data-permission>${role}</b>는 ${notes[role]}`;
 }));
-document.querySelector('.menu-button').addEventListener('click', () => document.querySelector('.header nav').classList.toggle('open'));
+const menuButton = document.querySelector('.menu-button');
+const siteNav = document.querySelector('.header nav');
+menuButton.addEventListener('click', () => {
+  const isOpen = siteNav.classList.toggle('open');
+  menuButton.textContent = isOpen ? 'CLOSE' : 'MENU';
+  menuButton.setAttribute('aria-expanded', String(isOpen));
+});
+siteNav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+  siteNav.classList.remove('open');
+  menuButton.textContent = 'MENU';
+  menuButton.setAttribute('aria-expanded', 'false');
+}));
 const observer = new IntersectionObserver(entries => entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('in'); }), {threshold:.15});
 document.querySelectorAll('section').forEach(el => observer.observe(el));
 
