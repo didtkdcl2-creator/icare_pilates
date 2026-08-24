@@ -16,6 +16,20 @@ textarea {
   font-synthesis: none;
 }
 
+/* Softer type color and weight keep the warm palette calm and less digital. */
+body { color: #403a33 !important; font-variation-settings: 'wght' 430; letter-spacing: -.006em; }
+p, li, input, select, textarea { font-variation-settings: 'wght' 420; }
+.manifesto h2, .feature h2, .visit h2, .hero-p h1, .sub h1, .history-main h1 { font-variation-settings: 'wght' 440; }
+.manifesto-bottom p, .feature-copy > p, .section-head > p:last-child, .body-copy p { color: #625a51 !important; }
+
+/* A small brand mark: playful enough for families, restrained enough for a studio. */
+.logo { position: relative; display: inline-block; }
+.logo::after {
+  content: '✦'; position: absolute; top: -10px; left: -7px;
+  color: #f2db72; font: 11px/1 Arial, sans-serif; letter-spacing: 0;
+  text-shadow: 0 1px 5px rgb(44 41 35 / .18);
+}
+
 /* Korean display type guardrail: apply only where the visible title is Korean.
    English display headings retain the editorial serif face on the main page. */
 .hero-p h1,
