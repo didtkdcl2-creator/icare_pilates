@@ -2,7 +2,7 @@ const dialog = document.querySelector('#admin-dialog');
 const loginForm = document.querySelector('#admin-login');
 const adminShell = document.querySelector('.admin-shell');
 const showLogin = () => { loginForm.hidden = false; adminShell.hidden = true; loginForm.reset(); loginForm.querySelector('.login-error').textContent = ''; };
-document.querySelector('[data-open-admin]').addEventListener('click', () => { showLogin(); dialog.showModal(); });
+document.querySelectorAll('[data-open-admin]').forEach(button => button.addEventListener('click', () => { showLogin(); dialog.showModal(); }));
 document.querySelector('.close').addEventListener('click', () => dialog.close());
 dialog.addEventListener('click', e => { if (e.target === dialog) dialog.close(); });
 loginForm.addEventListener('submit', event => {
@@ -31,17 +31,23 @@ document.querySelectorAll('[data-role]').forEach(button => button.addEventListen
   const permission = document.querySelector('.permission'); if (permission) permission.innerHTML = `권한 안내: <b data-permission>${role}</b>는 ${notes[role]}`;
 }));
 const menuButton = document.querySelector('.menu-button');
-const siteNav = document.querySelector('.header nav');
-menuButton.addEventListener('click', () => {
-  const isOpen = siteNav.classList.toggle('open');
-  menuButton.textContent = isOpen ? 'CLOSE' : 'MENU';
-  menuButton.setAttribute('aria-expanded', String(isOpen));
-});
-siteNav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
-  siteNav.classList.remove('open');
-  menuButton.textContent = 'MENU';
-  menuButton.setAttribute('aria-expanded', 'false');
-}));
+const siteMenu = document.querySelector('.site-menu');
+const menuScrim = document.querySelector('.menu-scrim');
+const menuClose = document.querySelector('.menu-close');
+const setMenu = open => {
+  siteMenu.classList.toggle('is-open', open);
+  menuScrim.hidden = !open;
+  requestAnimationFrame(() => menuScrim.classList.toggle('is-visible', open));
+  document.body.classList.toggle('menu-open', open);
+  menuButton.setAttribute('aria-expanded', String(open));
+  menuButton.querySelector('span').textContent = open ? 'CLOSE' : 'MENU';
+  siteMenu.setAttribute('aria-hidden', String(!open));
+};
+menuButton.addEventListener('click', () => setMenu(!siteMenu.classList.contains('is-open')));
+menuClose.addEventListener('click', () => setMenu(false));
+menuScrim.addEventListener('click', () => setMenu(false));
+siteMenu.querySelectorAll('a, [data-open-admin]').forEach(link => link.addEventListener('click', () => setMenu(false)));
+document.addEventListener('keydown', event => { if (event.key === 'Escape' && siteMenu.classList.contains('is-open')) setMenu(false); });
 const observer = new IntersectionObserver(entries => entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('in'); }), {threshold:.15});
 document.querySelectorAll('section').forEach(el => observer.observe(el));
 
