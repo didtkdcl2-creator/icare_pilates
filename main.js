@@ -40,7 +40,8 @@ const setMenu = open => {
   requestAnimationFrame(() => menuScrim.classList.toggle('is-visible', open));
   document.body.classList.toggle('menu-open', open);
   menuButton.setAttribute('aria-expanded', String(open));
-  menuButton.querySelector('span').textContent = open ? 'CLOSE' : 'MENU';
+  menuButton.querySelector('span').textContent = open ? '닫기' : '메뉴';
+  menuButton.setAttribute('aria-label', open ? '메뉴 닫기' : '메뉴 열기');
   siteMenu.setAttribute('aria-hidden', String(!open));
 };
 menuButton.addEventListener('click', () => setMenu(!siteMenu.classList.contains('is-open')));
