@@ -170,6 +170,7 @@
         }
       }
     </style>
+    <link rel="stylesheet" href="/client.css" />
   </head>
   <body class="sub">
     <header class="sub-head">
@@ -180,15 +181,13 @@
     <main>
       <section class="sub-main">
         <div>
-          <p class="eyebrow">RESERVATION & Q&A</p>
-          <h1>우리 아이에게 맞는<br />움직임을 찾아볼까요?</h1>
+          <p class="section-label">온라인 상담 신청</p>
+          <h1>나에게 맞는 레슨,<br />편하게 상담하세요</h1>
           <p class="sub-intro">
-            첫 상담에서 아이의 움직임과 생활 습관을 함께 살펴봅니다.<br />원하는
-            프로그램과 가능한 시간을 남겨주시면 확인 후 안내드립니다.
+            원하는 레슨과 운동 경험, 가능한 시간을 남겨주세요. 몸 상태와 목표를 함께 살펴보고 상담을 안내드립니다.
           </p>
           <div class="contact-buttons">
-            <a href="tel:0507-1379-2479">전화 문의</a
-            ><a href="#form">K 카카오톡 문의</a
+            <a href="tel:01048692479" data-kakao>전화 상담</a
             ><a
               href="https://naver.me/GXFVllY5"
               target="_blank"
@@ -198,18 +197,23 @@
           </div>
         </div>
         <form class="inquiry-form" id="form">
-          <label>보호자 성함<input name="name" placeholder="성함을 입력해 주세요" required /></label
+          <label>성함 · 키즈 상담은 보호자 성함<input name="name" placeholder="성함을 입력해 주세요" required /></label
           ><label>연락처<input name="phone" type="tel" placeholder="010-0000-0000" required /></label
           ><label
             >관심 프로그램<select name="program">
-              <option>어린이 필라테스</option>
-              <option>골프 필라테스</option>
-              <option>산후 · 통증 케어</option>
-              <option>시니어 · 임산부 운동</option>
+              <option>1:1 Private</option>
+              <option>2:1 Duet</option>
+              <option>3:1 Group</option>
+              <option>아이케어 키즈 필라테스</option>
+              <option>임산부·산후 운동</option>
+              <option>시니어 운동</option>
+              <option>슈로스 특화운동</option>
+              <option>골프 컨디셔닝</option>
+              <option>산후·통증 케어</option>
             </select></label
           ><label
             >문의 내용<textarea
-              name="message" placeholder="아이의 연령, 운동 경험, 궁금한 점을 남겨주세요." required
+              name="message" placeholder="운동 경험, 희망 시간, 궁금한 점을 남겨주세요. 키즈 상담은 아이의 연령도 알려주세요." required
             ></textarea></label
           ><button type="submit">문의 남기기 →</button>
         </form>
@@ -225,9 +229,7 @@
             ><span>어린이 필라테스는 몇 살부터 가능한가요?</span>
           </summary>
           <p class="faq-answer">
-            보통 만 5세부터 시작할 수 있습니다. 다만 연령보다 아이의 움직임
-            발달과 수업 참여도를 먼저 살펴보고, 상담 후 가장 편안한 시작 시점을
-            안내합니다.
+            아이케어 키즈 필라테스는 7–18세를 대상으로 합니다. 아이의 성장 시기와 움직임, 수업 참여도를 살펴 상담 후 레슨을 안내합니다.
           </p>
         </details>
         <details class="faq">
@@ -244,14 +246,13 @@
             <small>03</small><span>주차와 보호자 대기 공간이 있나요?</span>
           </summary>
           <p class="faq-answer">
-            벨포레스퀘어 지하 주차장을 이용하실 수 있고, 수업 중에는 보호자 대기
-            공간에서 편안히 기다리실 수 있습니다.
+            벨포레스퀘어 건물 주차는 1시간 가능합니다. 4층까지 엘리베이터를 이용해주세요.
           </p>
         </details>
       </section>
     </main>
-    <dialog class="confirm-dialog" id="inquiry-confirm"><div class="confirm-inner"><p class="eyebrow">CONFIRM YOUR INQUIRY</p><h2>문의 내용을<br>등록하시겠습니까?</h2><p>등록해 주시면 확인 후 <b>1~2일 이내 전화로 안내</b>드립니다.</p><div class="phone-card"><span>빠른 응대가 필요하신가요?</span><a href="tel:0507-1379-2479">0507-1379-2479 ↗</a></div><div class="dialog-actions"><button class="cancel" type="button">다시 작성</button><button class="submit-confirm" type="button">등록하기 →</button></div></div></dialog>
-    <dialog class="confirm-dialog" id="inquiry-success"><div class="confirm-inner"><p class="eyebrow">INQUIRY RECEIVED</p><h2>문의가<br>접수되었습니다.</h2><p>담당자가 내용을 확인한 뒤 <b>1~2일 이내 등록하신 번호로 연락</b>드리겠습니다.</p><div class="phone-card"><span>빠른 상담을 원하시면</span><a href="tel:0507-1379-2479">0507-1379-2479 ↗</a></div><div class="dialog-actions"><button class="submit-confirm" type="button" data-close-success>확인했습니다</button></div></div></dialog>
+    <dialog class="confirm-dialog" id="inquiry-confirm"><div class="confirm-inner"><h2>문의 내용을<br>등록하시겠습니까?</h2><p>등록해 주시면 확인 후 <b>1~2일 이내 전화로 안내</b>드립니다.</p><div class="phone-card"><span>빠른 응대가 필요하신가요?</span><a href="tel:01048692479">010-4869-2479 ↗</a></div><div class="dialog-actions"><button class="cancel" type="button">다시 작성</button><button class="submit-confirm" type="button">등록하기 →</button></div></div></dialog>
+    <dialog class="confirm-dialog" id="inquiry-success"><div class="confirm-inner"><h2>문의가<br>접수되었습니다.</h2><p>담당자가 내용을 확인한 뒤 <b>1~2일 이내 등록하신 번호로 연락</b>드리겠습니다.</p><div class="phone-card"><span>빠른 상담을 원하시면</span><a href="tel:01048692479">010-4869-2479 ↗</a></div><div class="dialog-actions"><button class="submit-confirm" type="button" data-close-success>확인했습니다</button></div></div></dialog>
     <script>
       const inquiryForm = document.querySelector('#form'); const confirmDialog = document.querySelector('#inquiry-confirm'); const successDialog = document.querySelector('#inquiry-success');
       inquiryForm.addEventListener('submit', event => { event.preventDefault(); if (inquiryForm.reportValidity()) confirmDialog.showModal(); });
@@ -259,5 +260,6 @@
       confirmDialog.querySelector('.submit-confirm').addEventListener('click', () => { const data = Object.fromEntries(new FormData(inquiryForm)); const type = new URLSearchParams(location.search).get('type') === 'trial' ? 'trial' : 'reservation'; const saved = JSON.parse(localStorage.getItem('icare_submissions') || '[]'); saved.push({ ...data, type, createdAt: new Date().toISOString() }); localStorage.setItem('icare_submissions', JSON.stringify(saved)); confirmDialog.close(); successDialog.showModal(); inquiryForm.reset(); });
       successDialog.querySelector('[data-close-success]').addEventListener('click', () => successDialog.close());
     </script>
+    <script type="module">import './site.js';const params=new URLSearchParams(location.search);const chosen=params.get('program');if(chosen){const select=document.querySelector('select[name=program]');if([...select.options].some(o=>o.value===chosen))select.value=chosen;}if(params.get('type')==='trial'){document.querySelector('.section-label').textContent='체험수업 상담 신청';document.querySelector('#form button').textContent='체험수업 문의 남기기 →';}</script>
   </body>
 </html>
