@@ -12,6 +12,7 @@ export default defineConfig({
         program: resolve(import.meta.dirname, 'program.html'),
         journal: resolve(import.meta.dirname, 'journal.html'),
         history: resolve(import.meta.dirname, 'history.html'),
+        admin: resolve(import.meta.dirname, 'admin.html'),
       },
     },
   },

@@ -33,5 +33,23 @@ html body .sub h1,html body .hero-p h1,html body .history-main h1,html body .jou
 #admin-dialog>.close{width:36px;height:36px;right:8px;top:8px;background:#fff;color:#282823;border:0;line-height:1}
 @media(max-width:1000px){.hero-studio .hero-photo-primary{height:350px}.hero-studio .hero-photo-secondary{height:250px}}
 @media(max-width:700px){.hero-studio{height:215px;gap:10px;padding-bottom:20px}.hero-studio .hero-photo-primary{height:195px}.hero-studio .hero-photo-secondary{height:155px;margin-bottom:20px}.hero-studio figcaption{font-size:10px}.admin-shell aside{padding-right:52px!important}.client-menu{box-shadow:none!important}.client-menu.is-open{box-shadow:-16px 0 44px #28282330!important}}
+
+.client-footer .footer-bottom a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: #fff6d9;
+  font-size: 13px;
+  white-space: nowrap;
+  text-underline-offset: 4px;
+}
+.client-header :focus-visible,
+.client-footer :focus-visible,
+.client-menu :focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 4px;
+}
+.sub .inquiry-form :is(input, select, textarea) { font-size: 16px !important; }
+.sub .faq-answer { white-space: pre-wrap; }
 @media(max-width:380px){.consult-link{display:none}.client-hero h1{font-size:32px!important}.lesson-card{gap:12px}.lesson-card small{font-size:15px!important}.client-journal-links a{font-size:12px!important}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}.studio-track{scroll-behavior:auto}}
